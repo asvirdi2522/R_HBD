@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hint Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f5e1ea; /* Light pink background color */
+    }
+    /* Add any additional styles for the hint page */
+    h1 {
+      color: #ff69b4; /* Pink color for the hint text */
+      cursor: pointer; /* Change cursor to pointer for interactive feel */
+      transition: color 0.3s ease; /* Smooth transition effect for color change */
+    }
+    h1:hover {
+      color: #ff1493; /* Change color on hover */
+    }
+    #beeImage {
+        border-radius: 10px;
+        margin-left: 40%;
+      display: none; /* Initially hide the bee image */
+      max-width: 300px; /* Adjust image size as needed */
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <h1 onclick="changeContent()">Hint chahiye babeueueu ko?</h1>
+    <img id="beeImage" src="r1.jpg" alt="Bee Image">
+  <!-- Add any hint text or content here -->    
+  <script>
+   function changeContent() {
+      var hintText = document.getElementsByTagName('h1')[0];
+      var beeImage = document.getElementById('beeImage');
+
+      if (hintText.textContent === "Hint chahiye babeueueu ko?") {
+        hintText.textContent = "Letter ke peeche DEKHO janiu";
+        beeImage.style.display = 'block'; // Show the bee image
+      }
+    }
+  </script>
+</body>
+</html>
